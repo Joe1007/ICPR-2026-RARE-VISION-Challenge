@@ -1,0 +1,8 @@
+exp_id,variant,backbones,fusion,calibration,temporal_decoding,event_gen,mAP_05,mAP_95,anatomical_mAP_05,pathological_mAP_05
+A0,Full,EndoFM+DINOv3,weighted,T+TT,full,per-label,0.4730,0.3658,0.4630,0.4819
+A2,DINOv3 only,DINOv3,single-backbone,T+TT,full,per-label,0.4183,0.3309,0.4196,0.4172
+A3,EndoFM only,EndoFM,single-backbone,T+TT,full,per-label,0.3503,0.2845,0.3374,0.3617
+A4,Uniform backbone weights,EndoFM+DINOv3,uniform,T+TT,full,per-label,0.4520,0.3492,0.4393,0.4633
+B1,Uniform model weights,EndoFM+DINOv3,weighted,T+TT,full,per-label,0.4799,0.3388,0.4986,0.4633
+C1,No struct. decoding,EndoFM+DINOv3,weighted,T+TT,none,per-label,0.3002,0.2612,0.2004,0.3890
+C8,Tuple event gen,EndoFM+DINOv3,weighted,T+TT,full,tuple-based,0.3897,0.3333,0.2860,0.4818

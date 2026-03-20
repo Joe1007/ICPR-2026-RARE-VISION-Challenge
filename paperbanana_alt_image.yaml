@@ -1,0 +1,12 @@
+# 備用設定：當 gemini-3-pro-image-preview 回傳 503 時使用
+# 可嘗試：gemini-2.5-flash-image（無 -preview）或 gemini-3.1-flash-image-preview
+vlm:
+  provider: gemini
+  model: gemini-3.1-pro-preview
+
+image:
+  provider: google_imagen
+  model: gemini-2.5-flash-image
+
+pipeline:
+  refinement_iterations: 1
