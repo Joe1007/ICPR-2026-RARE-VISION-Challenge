@@ -1,0 +1,33 @@
+# Datasets (very large)
+galar_dataset/
+Testingset/
+
+# Precomputed features (very large)
+features/
+features_dinov3/
+
+# Backbone checkpoints / pretrained weights (very large)
+EndoFM-LV/checkpoints/
+
+# Experiment outputs
+run_*/
+ablation_guideline_runs/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Secrets / env
+.env
+
+# Accidental install/version marker file
+=*.*
+
+# Optional: prediction/validation dumps (not needed for running V5)
+test_v*_pred*.json
+test_trans_pred*.json
+test_final_pred*.json
+val_gt*.json
+val_pred*.json
+val_metrics*.json
+

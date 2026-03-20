@@ -1,0 +1,18 @@
+{
+  "labels_dir": "./galar_dataset/downloads/Labels",
+  "image_root": "./galar_dataset/downloads",
+  "frame_template": null,
+  "train_ratio": 0.85,
+  "val_ratio": 0.15,
+  "num_frames": 4,
+  "frame_stride": 2,
+  "clip_mode": "center",
+  "image_size": 224,
+  "pretrained_weights": "/ssd8/cheng/RARE-VISION-2026-Challenge/EndoFM-LV/checkpoints/endofm_lv.pth",
+  "checkpoint_key": "teacher",
+  "batch_size": 8,
+  "num_workers": 4,
+  "seed": 42,
+  "no_skip_missing_images": false,
+  "features_dir": "features"
+}

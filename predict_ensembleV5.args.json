@@ -1,0 +1,22 @@
+{
+  "test_root": "./Testingset",
+  "endofm_features_dir": "features",
+  "endofm_ensemble_dir": "ensemble",
+  "pretrained_weights": "/ssd8/cheng/RARE-VISION-2026-Challenge/EndoFM-LV/checkpoints/endofm_lv.pth",
+  "checkpoint_key": "teacher",
+  "num_frames": 4,
+  "frame_stride": 2,
+  "clip_mode": "center",
+  "image_size": 224,
+  "batch_size": 8,
+  "num_workers": 4,
+  "tta": true,
+  "out_json": "test_v5_pred.json",
+  "extra_backbones": [
+    {
+      "name": "dinov3_vitl16",
+      "features_dir": "features_dinov3",
+      "ensemble_dir": "ensemble_dinov3"
+    }
+  ]
+}

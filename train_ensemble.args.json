@@ -1,0 +1,14 @@
+{
+  "features_dir": "features",
+  "ensemble_dir": "ensemble",
+  "epochs": 50,
+  "batch_size": 256,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "seed": 42,
+  "focal_alpha": 0.25,
+  "focal_gamma": 2.0,
+  "asl_gamma_neg": 4.0,
+  "asl_gamma_pos": 1.0,
+  "weighted_sampling": false
+}

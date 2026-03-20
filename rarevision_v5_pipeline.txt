@@ -1,0 +1,144 @@
+Create a clean academic pipeline figure for a medical imaging / computer vision paper.
+
+Title:
+Overview of the proposed multi-backbone event detection framework
+
+Goal:
+Draw a publication-ready method figure that combines high-level module packaging with moderate structural detail.
+The figure should preserve the named modules DHE, VGHF, and ATED, while also showing the main internal flow more clearly.
+Do NOT show ablation study.
+Do NOT include overly low-level implementation details such as exact feature dimensions, all classifier heads, or exact parameter names.
+Use a clean conference-paper style with grouped modules, thin arrows, subtle colors, and minimal but informative text.
+
+Layout:
+Use a left-to-right pipeline with 4 main stages:
+(1) Data input and backbone-specific encoding
+(2) Diverse Head Ensemble (DHE)
+(3) Validation-Guided Hierarchical Fusion (VGHF)
+(4) Anatomy-Aware Temporal Event Decoding (ATED)
+
+Overall structure:
+Data inputs on the left
+-> two explicit backbone branches in the middle-left
+-> DHE in the middle
+-> VGHF above / center-right
+-> ATED on the right
+-> final event predictions
+
+Important style requirement:
+Keep DHE, VGHF, and ATED as the main named modules.
+Do NOT wrap the two backbones into another named outer box.
+Instead, show them as two explicit parallel branches feeding into DHE.
+
+Part 1: Data input
+Use two simple input boxes on the far left:
+Top:
+Train / validation videos
+Bottom:
+Test videos
+
+Part 2: Backbone-specific encoding
+Show two parallel branches between the data input and DHE.
+
+Top branch:
+EndoFM-LV
+subtitle: clip-level temporal features
+
+Bottom branch:
+DINOv3 ViT-L/16
+subtitle: frame-level visual features
+
+Both train / validation videos and test videos should feed these two branches.
+Make it visually clear that the same two backbones are used for both validation and test-time prediction.
+If needed, add only a very small note near EndoFM-LV:
+4-frame clips
+but do not emphasize exact stride or feature dimensions.
+
+Part 3: Diverse Head Ensemble (DHE)
+Place one green module after the two backbone branches.
+Label:
+Diverse Head Ensemble (DHE)
+
+Inside the module, show a little more structure than before:
+Top small text:
+multi-head classifiers for each backbone
+Bottom small text:
+Linear / MLP + imbalance-aware losses
+
+Do not list all 5 heads explicitly.
+Do not show all loss names individually.
+Just keep it moderate-detail and abstract.
+
+Show that both backbone branches feed into DHE.
+
+Part 4: Validation-Guided Hierarchical Fusion (VGHF)
+Place one blue module above / to the right of DHE.
+Label:
+Validation-Guided Hierarchical Fusion (VGHF)
+
+This module should receive a validation-prediction arrow from DHE.
+Inside the module, show 4 stacked items:
+model weighting
+backbone weighting
+temperature scaling
+threshold / decoding search
+
+Below or beside it, add a small blue output box:
+Learned inference parameters
+
+Use dashed arrows from this learned-parameters box to the downstream test-time path and ATED.
+This should make it visually clear that validation is used to learn parameters later reused at test time.
+
+Part 5: Test-time prediction path
+From DHE, show a test-time prediction path going toward the right.
+
+For the EndoFM-LV test-time branch, explicitly show a lightweight TTA step:
+normal / flip
+-> TTA average
+
+Keep this compact.
+A small split-and-merge structure is enough.
+
+For the DINOv3 test-time branch, keep it as a direct prediction path without TTA.
+
+After that, merge the two backbone predictions into a compact intermediate step:
+fused test predictions
+
+Then connect this fused prediction path to ATED.
+
+Part 6: Anatomy-Aware Temporal Event Decoding (ATED)
+Place one orange module on the right.
+Label:
+Anatomy-Aware Temporal Event Decoding (ATED)
+
+Inside this module, show 4 stacked items:
+temporal smoothing
+anatomical constraints
+thresholding + refinement
+per-label event generation
+
+This should be more detailed than the minimal version, but still compact.
+Do not expand into 7 separate boxes.
+Do not separately show morphology, landmark consistency, or GI monotonicity as independent outer blocks.
+These should be absorbed into the higher-level phrase anatomical constraints or thresholding + refinement.
+
+Final output
+Use one gray box on the far right:
+Event predictions
+
+Visual priorities:
+1. DHE, VGHF, and ATED should remain the main conceptual modules
+2. The two backbones should be explicit and visually important
+3. Validation-driven learning and test-time inference should be clearly distinguished
+4. EndoFM test-time augmentation should be visible but compact
+5. The figure should contain more structural detail than a purely abstract block diagram, but still remain compact and elegant
+6. The result should look like a method figure from a conference paper, not a software architecture diagram
+
+Avoid:
+- long explanatory paragraphs inside the figure
+- explicit lists of all five classifier heads
+- exact feature dimensions such as 768-d or 1024-d
+- exact search parameter names such as wa, wp, min_a, min_p, gap_a, gap_p
+- JSON formatting, video ID mapping, task descriptions, or evaluation metric summaries
+
+Prefer grouped modules with visible internal stacked sub-blocks, rather than single plain boxes.

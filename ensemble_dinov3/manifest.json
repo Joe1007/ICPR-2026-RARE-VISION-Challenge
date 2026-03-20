@@ -1,0 +1,50 @@
+{
+  "models": [
+    {
+      "path": "ensemble_dinov3/model_0.pth",
+      "config": {
+        "model": "linear",
+        "loss": "bce",
+        "dropout": 0.3
+      },
+      "best_val_loss": 1.1583888734497547
+    },
+    {
+      "path": "ensemble_dinov3/model_1.pth",
+      "config": {
+        "model": "linear",
+        "loss": "focal",
+        "dropout": 0.3
+      },
+      "best_val_loss": 0.08787757440508687
+    },
+    {
+      "path": "ensemble_dinov3/model_2.pth",
+      "config": {
+        "model": "linear",
+        "loss": "asymmetric",
+        "dropout": 0.3
+      },
+      "best_val_loss": 0.02004562298458694
+    },
+    {
+      "path": "ensemble_dinov3/model_3.pth",
+      "config": {
+        "model": "mlp",
+        "loss": "bce",
+        "dropout": 0.3
+      },
+      "best_val_loss": 1.941104894759089
+    },
+    {
+      "path": "ensemble_dinov3/model_4.pth",
+      "config": {
+        "model": "mlp",
+        "loss": "focal",
+        "dropout": 0.3
+      },
+      "best_val_loss": 0.11863525915327021
+    }
+  ],
+  "embed_dim": 1024
+}

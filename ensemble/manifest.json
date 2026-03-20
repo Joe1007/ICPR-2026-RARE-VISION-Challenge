@@ -1,0 +1,50 @@
+{
+  "models": [
+    {
+      "path": "ensemble/model_0.pth",
+      "config": {
+        "model": "linear",
+        "loss": "bce",
+        "dropout": 0.3
+      },
+      "best_val_loss": 0.7724748082137102
+    },
+    {
+      "path": "ensemble/model_1.pth",
+      "config": {
+        "model": "linear",
+        "loss": "focal",
+        "dropout": 0.3
+      },
+      "best_val_loss": 0.08584172604006976
+    },
+    {
+      "path": "ensemble/model_2.pth",
+      "config": {
+        "model": "linear",
+        "loss": "asymmetric",
+        "dropout": 0.3
+      },
+      "best_val_loss": 0.02167007148083734
+    },
+    {
+      "path": "ensemble/model_3.pth",
+      "config": {
+        "model": "mlp",
+        "loss": "bce",
+        "dropout": 0.3
+      },
+      "best_val_loss": 1.8785599591564515
+    },
+    {
+      "path": "ensemble/model_4.pth",
+      "config": {
+        "model": "mlp",
+        "loss": "focal",
+        "dropout": 0.3
+      },
+      "best_val_loss": 0.05792051663627944
+    }
+  ],
+  "embed_dim": 768
+}
