@@ -56,12 +56,6 @@ ICPR-2026-RARE-VISION-Challenge/
 │  └─ model_*.pth
 └─ (other small scripts/docs)
 
-> **Note on `EndoFM-LV/`**
-> We do not commit the EndoFM-LV checkpoint weights inside `EndoFM-LV/checkpoints/`. Download the pretrained checkpoint separately and place it as instructed below.
-
-> **Note on Dataset**
-> The dataset is large. We do not include it in this repository.
-> Please obtain it separately and place it under `Testingset/`.
 ```
 
 ## (A) From Scratch: Generate `test_v5_pred.json`
@@ -168,7 +162,6 @@ We recommend downloading missing large assets from:
 ---
 
 ## Notes
-* **The dataset is large:** we do not commit `Testingset/` or `galar_dataset/` in this repository.
-* We expect large weights/features to be downloaded separately.
-* All scripts are intended to be run from the repository root.
+* **The dataset is large:** We don,'t put dataset in this repo, please obtain it separately and place it under `galar_dataset/`(for training) and `Testingset/`(for testing)
+* The large weights/features should be downloaded separately in the google cloud link we provide.
 
