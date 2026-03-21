@@ -7,7 +7,7 @@ Our approach is implemented in a set of scripts that build features, train light
 
 ## V5 Output
 
-The main output of the V5 pipeline is:
+The main output of the our pipeline is:
 
 - `test_v5_pred.json` (a events JSON file in the format expected by the challenge evaluator)
 
@@ -65,9 +65,7 @@ You will need the EndoFM-LV checkpoint and, depending on your workflow, may also
 
 **Download link placeholders (to be filled by you):**
 * **EndoFM-LV checkpoint** (place under `EndoFM-LV/checkpoints/`): 
-  `[DOWNLOAD LINK PLACEHOLDER]`
-* **Optional:** precomputed `features/`, `features_dinov3/`, `ensemble/`, `ensemble_dinov3/` bundles: 
-  `[DOWNLOAD LINK PLACEHOLDER]`
+  `[https://mycuhk-my.sharepoint.com/personal/1155167044_link_cuhk_edu_hk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F1155167044%5Flink%5Fcuhk%5Fedu%5Fhk%2FDocuments%2Fdata%2Fendofm%5Flv%2Etar&parent=%2Fpersonal%2F1155167044%5Flink%5Fcuhk%5Fedu%5Fhk%2FDocuments%2Fdata&ga=1]`
 
 **Expected EndoFM checkpoint location:**
 Place the checkpoint here:
@@ -155,9 +153,6 @@ Precomputed artifacts should be placed into:
 * **EndoFM features/ensemble:** `features/`, `ensemble/`
 * **DINOv3 features/ensemble:** `features_dinov3/`, `ensemble_dinov3/`
 * **Dataset:** `Testingset/`
-
-We recommend downloading missing large assets from:
-`[DOWNLOAD LINK PLACEHOLDER]` (weights and/or precomputed numpy/ensemble bundles)
 
 ---
 
