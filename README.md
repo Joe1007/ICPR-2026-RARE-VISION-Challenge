@@ -62,8 +62,7 @@ ICPR-2026-RARE-VISION-Challenge/
 > **Note on Dataset**
 > The dataset is large. We do not include it in this repository.
 > Please obtain it separately and place it under `Testingset/`.
-
----
+```
 
 ## (A) From Scratch: Generate `test_v5_pred.json`
 
